@@ -22,7 +22,7 @@ class CashRegister
     if @discount > 0
       take_off = @discount
       @applied_discount = (@price * @discount)/100
-      
+
       @total = @total - @applied_discount
       return "After the discount, the total comes to $#{@total}."
     else
