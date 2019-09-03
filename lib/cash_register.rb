@@ -17,8 +17,10 @@ class CashRegister
       @price = price
       @total= @total +(@price * quantity)
       if quantity > 1
-      @items << title
-      binding.pry 
+        counter = 0
+        while counter < quantity
+          @items << title
+      
       end
   end
 
