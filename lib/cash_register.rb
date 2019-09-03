@@ -77,6 +77,7 @@ class CashRegister
     #   @total -= @price
     # else
       @total -= @price
+      binding.pry
     # end
 
   end
