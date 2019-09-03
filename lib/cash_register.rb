@@ -41,13 +41,13 @@ class CashRegister
     @items
   end
 
-  def void_last_transaction (item, price, quantity)
+  def void_last_transaction
     # if @quantity > 1
     #   @price * @quantity
     #   @total -= @price
     # else
       @total -= @price
-      binding.pry
+    
     # end
 
   end
