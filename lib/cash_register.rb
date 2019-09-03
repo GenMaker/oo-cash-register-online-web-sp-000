@@ -17,7 +17,7 @@ class CashRegister
     while title != false
       @price = price
       @total= @total +(@price * quantity)
-      binding.pry
+      #binding.pry
       @items << title
     end
   end
