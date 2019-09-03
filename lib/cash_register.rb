@@ -23,7 +23,7 @@ class CashRegister
           counter += 1
         end
       else
-        @item << item
+        @items << item
       end
   end
  #  def add_item(item, price, quantity = 1)
