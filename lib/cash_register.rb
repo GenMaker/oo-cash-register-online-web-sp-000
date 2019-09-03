@@ -42,10 +42,14 @@ class CashRegister
   end
 
   def void_last_transaction
-    binding.pry
-
-      @total -= @price
     
+    if quantity > 1
+      @price * quantity
+
+    else
+      @total -= @price
+    end
+
   end
 
 
