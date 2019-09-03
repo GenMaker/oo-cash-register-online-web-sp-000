@@ -20,7 +20,8 @@ class CashRegister
         counter = 0
         while counter < quantity
           @items << title
-      
+          counter += 1
+        end
       end
   end
 
