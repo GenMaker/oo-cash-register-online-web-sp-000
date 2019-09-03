@@ -45,7 +45,7 @@ class CashRegister
     binding.pry
 
       @total -= @price
-    end
+    
   end
 
 
