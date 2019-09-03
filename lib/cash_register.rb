@@ -6,7 +6,7 @@ class CashRegister
     @total = 0
     @discount = discount
     @quantity = quantity
-    @items
+    @items = []
   end
 
   def total
@@ -14,9 +14,11 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    
-    @price = price
-    @total= @total +(@price * quantity)
+    while title != false
+      @price = price
+      @total= @total +(@price * quantity)
+      binding.pry
+      @item << title
     end
   end
 
@@ -31,10 +33,7 @@ class CashRegister
   end
 
   def items (items)
-    added_items = []
-    if @items
-    added_items << title
-    added_items
+    @items
   end
 
 
