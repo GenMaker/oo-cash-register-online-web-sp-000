@@ -14,7 +14,8 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    while title != false
+    counter = 0
+    if title != false
       @price = price
       @total= @total +(@price * quantity)
       #binding.pry
