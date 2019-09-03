@@ -22,6 +22,8 @@ class CashRegister
           @items << title
           counter += 1
         end
+      else
+        @item << title
       end
   end
 
@@ -36,7 +38,7 @@ class CashRegister
     end
   end
 
-  def items 
+  def items
     @items
   end
 
