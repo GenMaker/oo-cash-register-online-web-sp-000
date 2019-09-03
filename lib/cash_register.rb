@@ -22,6 +22,7 @@ class CashRegister
         @total= @total +(@price * quantity)
         #binding.pry
         @items << title
+        counter += 1
     end
   end
 
