@@ -47,6 +47,7 @@ class CashRegister
     if @quantity > 0
       mult_item = @price * @quantity
       @total -= mult_item
+    end
   end
 
 end
