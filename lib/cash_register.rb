@@ -18,6 +18,7 @@ class CashRegister
       @total= @total +(@price * quantity)
       if quantity > 1
       @items << title
+      binding.pry 
       end
   end
 
