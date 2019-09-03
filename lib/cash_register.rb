@@ -2,66 +2,20 @@ require "pry"
 class CashRegister
   attr_accessor :total, :discount, :quantity, :items,:price
 
-  # def initialize(discount = 0)
-  #   @total = 0
-  #   @discount = discount
-  #   @quantity = quantity
-  #   @items = []
-  # end
-  #
-  # def total
-  #   @total
-  # end
-  #
-  # def add_item(item, price, quantity = 1)
-  #     @price = price
-  #     @total += (@price * quantity)
-  #     if quantity > 1
-  #       counter = 0
-  #       while counter < quantity
-  #         @items << item
-  #         counter += 1
-  #       end
-  #     else
-  #       @items << item
-  #     end
-  # end
-  #
-  # def apply_discount
-  #   if @discount > 0
-  #     @applied_discount = (price * @discount)/100
-  #     @total -= @applied_discount
-  #     return "After the discount, the total comes to $#{@total}."
-  #   else
-  #     return "There is no discount to apply."
-  #   end
-  # end
-  #
-  # def items
-  #   @items
-  # end
-  #
-  # def void_last_transaction
-  #   # if @quantity > 1
-  #   #   @price * @quantity
-  #   #   @total -= @price
-  #   # else
-  #     @total -= @price
-  #     binding.pry
-  #   # end
-  #
-  # end
+  def initialize(discount = 0)
+    @total = 0
+    @discount = discount
+    @quantity = quantity
+    @items = []
+  end
 
+  def total
+    @total
+  end
 
-    def initialize(discount = 0)
-      @total = 0
-      @discount = discount
-      @items = []
-    end
-
-    def add_item(item, price, quantity = 1)
+  def add_item(item, price, quantity = 1)
       @price = price
-      @total += price * quantity
+      @total += (@price * quantity)
       if quantity > 1
         counter = 0
         while counter < quantity
@@ -71,21 +25,30 @@ class CashRegister
       else
         @items << item
       end
-    end
+  end
 
-    def apply_discount
-      if @discount > 0
-        @to_take_off = (price * discount)/100
-        @total -= @to_take_off
-        return "After the discount, the total comes to $#{total}."
-      else
-        return "There is no discount to apply."
-      end
+  def apply_discount
+    if @discount > 0
+      @applied_discount = (price * @discount)/100
+      @total -= @applied_discount
+      return "After the discount, the total comes to $#{@total}."
+    else
+      return "There is no discount to apply."
     end
+  end
 
-    def void_last_transaction
+  def items
+    @items
+  end
+
+  def void_last_transaction
+    # if @quantity > 1
+    #   @price * @quantity
+    #   @total -= @price
+    # else
       @total -= @price
-    end
+      binding.pry
+    # end
 
-
+  end
 end
