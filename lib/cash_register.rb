@@ -15,16 +15,12 @@ class CashRegister
 
   def add_item(title, price, quantity = 1)
 
-    if quantity > 1
-        counter = 0
-      while counter < quantity
-        @price = price
-        @total= @total +(@price * quantity)
-        #binding.pry
-        @items << title
-        counter += 1
-      end
-    end
+
+      @price = price
+      @total= @total +(@price * quantity)
+      #binding.pry
+      @items << title
+    
   end
 
   def apply_discount
