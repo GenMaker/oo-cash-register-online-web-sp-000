@@ -20,9 +20,7 @@ class CashRegister
 
   def apply_discount
     if @discount > 0
-      take_off = @discount
       @applied_discount = (@price * @discount)/100
-
       @total = @total - @applied_discount
       return "After the discount, the total comes to $#{@total}."
     else
@@ -31,8 +29,12 @@ class CashRegister
   end
 
   def items (items)
+    added_items = []
+    if @items 
+    added_items << title
+    added_items
   end
- 
+
 
 
 
