@@ -41,14 +41,19 @@ class CashRegister
     @items
   end
 
+  # def void_last_transaction
+  #   quantity = @quantity
+  #   if quantity > 0
+  #     @total -= @price
+  #   else quantity > 1
+  #     mult_item = @price * @quantity
+  #     @total -= mult_item
+  #   end
+  # end
+
+
   def void_last_transaction
-    quantity = @quantity
-    if quantity > 0
-      @total -= @price
-    else quantity > 1
-      mult_item = @price * @quantity
-      @total -= mult_item
-    end
+    @total -= @price
   end
 
 end
