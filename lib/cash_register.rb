@@ -14,12 +14,14 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    counter = 0
-    if title != false
-      @price = price
-      @total= @total +(@price * quantity)
-      #binding.pry
-      @items << title
+
+    if quantity > 1
+        counter = 0
+      while counter < quantity
+        @price = price
+        @total= @total +(@price * quantity)
+        #binding.pry
+        @items << title
     end
   end
 
