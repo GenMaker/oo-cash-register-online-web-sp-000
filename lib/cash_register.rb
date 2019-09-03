@@ -72,12 +72,12 @@ class CashRegister
   end
 
   def void_last_transaction
-    if @quantity > 1
-      @price * @quantity
+    # if @quantity > 1
+    #   @price * @quantity
+    #   @total -= @price
+    # else
       @total -= @price
-    else
-      @total -= @price
-    end
+    # end
 
   end
 
