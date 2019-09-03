@@ -23,6 +23,7 @@ class CashRegister
         #binding.pry
         @items << title
         counter += 1
+      end
     end
   end
 
