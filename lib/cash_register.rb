@@ -63,7 +63,6 @@ class CashRegister
   end
 
   def void_last_transaction
-    binding.pry
     if @quantity > 1
       @price * @quantity
       @total -= @price
